@@ -1,19 +1,268 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recreated Header with Tailwind</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        
+    </style>
 </head>
 
 <body>
-    <h1>Hello, world!</h1>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-        crossorigin="anonymous"></script>
+    <header id="main-header" class="header-visible shadow-md">
+        <!-- Upper Banner -->
+        <div class="banner-text text-center py-1">
+            БЕЗПЛАТНА ДОСТАВКА ДО 2 РАБОТНИ ДНИ
+        </div>
+        <!-- Main Header Content -->
+        <div class="px-4 md:px-10 lg:px-20 py-3 bg-[#fffae4] flex items-center justify-between">
+            <!-- Logo Section -->
+            <div class="flex items-center">
+                <img src="https://via.placeholder.com/204x78" alt="Cocosolis Logo" class="w-[204px] h-[78px]" id="logo">
+            </div>
+            <!-- Navigation Links -->
+            <nav class="hidden md:flex space-x-8 text-lg">
+                <a href="#section-face" class="nav-link hover:text-[#FFC7ED]">НАЧАЛО</a>
+                <a href="#section-products" class="nav-link hover:text-[#FFC7ED]">ПРОДУКТИ</a>
+                <a href="#section-club" class="nav-link hover:text-[#FFC7ED]">CLUB</a>
+                <a href="#section-about" class="nav-link hover:text-[#FFC7ED]">ЗА НАС</a>
+                <a href="#section-contact" class="nav-link hover:text-[#FFC7ED]">КОНТАКТИ</a>
+            </nav>
+            <!-- Icon Links Section -->
+            <div class="flex items-center space-x-4">
+                <!-- Menu Icon -->
+                <div class="relative">
+                    <button class="menu-button focus:outline-none icon-button">
+                        <i class="fa fa-bars text-xl"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="#" class="block text-[#304463] hover:text-[#FFC7ED] py-1">УСЛОВИЯ ЗА ПОЛЗВАНЕ НА
+                            САЙТА</a>
+                        <a href="#" class="block text-[#304463] hover:text-[#FFC7ED] py-1">ПРАВИЛА ЗА ЗАКУПУВАНЕ</a>
+                    </div>
+                </div>
+                <!-- Search Icon -->
+                <button class="focus:outline-none icon-button">
+                    <i class="fas fa-search text-xl"></i>
+                </button>
+                <!-- Cart Icon -->
+                <div class="relative">
+                    <button class="focus:outline-none icon-button">
+                        <i class="fas fa-shopping-cart text-xl"></i>
+                    </button>
+                    <span
+                        class="absolute -top-1 -right-2 cart-badge rounded-full text-xs w-5 h-5 flex items-center justify-center">0</span>
+                </div>
+                <!-- User Icon and Sign In/Register Link -->
+                <div class="flex items-center space-x-1">
+                    <i class="far fa-user-circle text-xl icon-button"></i>
+                    <a href="#" class="nav-link hover:text-[#FFC7ED]">Регистрация/Влез</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid-line"></div>
+
+        <div id="secondary-header"
+            class="secondary-header px-4 md:px-10 lg:px-20 py-2 text-center text-[#304463] text-lg shadow-md hidden">
+            <div class="flex justify-center space-x-4">
+                <a href="#section-face" class="nav-link hover:text-[#FFC7ED]">ЛИЦЕ</a>
+                <a href="#section-hair" class="nav-link hover:text-[#FFC7ED]">КОСА</a>
+                <a href="#section-skin" class="nav-link hover:text-[#FFC7ED]">КОЖА</a>
+                <a href="#section-tanning" class="nav-link hover:text-[#FFC7ED]">АВТОБРОНЗАНТИ</a>
+                <a href="#section-glow" class="nav-link hover:text-[#FFC7ED]">БЛЯСЪК</a>
+                <a href="#section-tan" class="nav-link hover:text-[#FFC7ED]">ТЕН</a>
+                <a href="#section-spf" class="nav-link hover:text-[#FFC7ED]">SPF</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Banner Section -->
+    <div class="banner-container relative mt-24 px-4 md:px-10 lg:px-0">
+        <img src="https://via.placeholder.com/1200x400" alt="Banner Image"
+            class="size-full h-[700px] object-cover rounded-lg">
+        <div class="absolute top-[50%] left-[25%] text-left">
+            <h2 class="text-4xl md:text-5xl font-bold mb-2" style="color: #7D8ABC;">New!</h2>
+            <p class="text-xl md:text-2xl font-light mb-6" style="color: #304463;">AURA: ПЪРВИЯТ БЛЕСТЯЩ СПРЕЙ С ПЕПТИДИ
+            </p>
+            <button class="bg-[#FFC7ED] text-[#304463] py-3 px-6 rounded-lg hover:bg-opacity-90 transition">Купи
+                сега</button>
+        </div>
+    </div>
+
+    <!-- Reusable Section Component -->
+    <script src="sections.js"></script>
+
+    <script>
+        document.write(createSection('section-face', 'ЛИЦЕ', 'Натурални продукти за здрава и сияйна кожа на лицето'));
+    </script>
+
+    <section class="brands-section mt-0">
+        <div class="overflow-hidden relative bg-[#7D8ABC] py-2">
+            <div class="scrolling-text flex items-center space-x-8 whitespace-nowrap animate-scroll px-8">
+                <span class="text-white text-lg font-bold mr-8">Медиите говорят за нас</span>
+                <img src="https://via.placeholder.com/150x50?text=COSMOPOLITAN" alt="COSMOPOLITAN" class="h-8">
+                <img src="https://via.placeholder.com/150x50?text=VOGUE" alt="VOGUE" class="h-8">
+                <img src="https://via.placeholder.com/150x50?text=ELLE" alt="ELLE" class="h-8">
+                <img src="https://via.placeholder.com/150x50?text=marie claire" alt="marie claire" class="h-8">
+                <img src="https://via.placeholder.com/150x50?text=InStyle" alt="InStyle" class="h-8">
+                <img src="https://via.placeholder.com/150x50?text=GRAZIA" alt="GRAZIA" class="h-8">
+                <img src="https://via.placeholder.com/150x50?text=Forbes" alt="Forbes" class="h-8">
+                <img src="https://via.placeholder.com/150x50?text=VANITY FAIR" alt="VANITY FAIR" class="h-8">
+            </div>
+        </div>
+    </section>
+
+    <!-- Other Sections -->
+    <script src="other_sections.js"></script>
+
+    <!-- Info Section -->
+    <section
+        class="info-section px-4 md:px-10 lg:px-20 py-16 bg-[#7D8ABC] flex flex-col md:flex-row items-center gap-8">
+        <div class="flex-1">
+            <h3 class="text-3xl font-bold mb-4 text-[#304463]">Натурални и Био</h3>
+            <p class="text-lg font-light mb-6 text-[#304463]">Продуктите на COCOSOLIS са винаги натурални и създадени само с
+                най-висококачествени био, студено пресовани масла.</p>
+            <h3 class="text-3xl font-bold mb-4 text-[#304463]">Създадени с любов</h3>
+            <p class="text-lg font-light mb-6 text-[#304463]">Създадени с любов и уважение към хората и природата. Нежни към
+                кожата. Притежаващи аромат, в който ще се влюбите.</p>
+            <h3 class="text-3xl font-bold mb-4 text-[#304463]">С отношение</h3>
+            <p class="text-lg font-light text-[#304463]">Без наличие на парабени, оцветители, минерални и синтетични масла и
+                разбира се, без тестване върху животни.</p>
+        </div>
+        <div class="flex-1">
+            <img src="https://via.placeholder.com/600x400" alt="Product Image" class="w-full rounded-lg shadow-md">
+        </div>
+    </section>
+
+    <!-- Subscription Section -->
+    <section class="subscription-sectio px-4 md:px-10 lg:px-20 py-16 bg-[#FFF8DB] text-[#304463]">
+        <div class="text-center max-w-2xl mx-auto">
+            <h3 class="text-3xl font-bold mb-6">Нека бъдем приятели!</h3>
+            <p class="text-lg font-light mb-8">Абонирайте се, за да бъдете сред първите, които ще научат за нашите нови
+                продукти и промоции:</p>
+            <input type="email" placeholder="твоят имейл адрес" class="w-full p-4 mb-4 rounded-lg text-[#7D8ABC]">
+            <label class="block mb-4">
+                <input type="checkbox" class="mr-2">
+                <span class="text-sm">Съгласен/На съм предоставените от мен имейли да бъдат използвани, за да получавам
+                    известия за новости, подаръци и бъдещи промоции, свързани с продуктите COCOSOLIS, съгласно <a href="#"
+                        class="underline text-[#f4b8e1]">Общите условия за ползване на сайта</a> и <a href="#"
+                        class="underline text-[#f4b8e1]">Политиката за личните данни</a>.</span>
+            </label>
+            <button class="bg-[#7D8ABC] text-white py-3 px-8 rounded-lg hover:bg-opacity-90 transition">ВЛЕЗ В КЛУБА</button>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="reviews-section px-4 md:px-10 lg:px-20 py-16 bg-[#FFFBF5]">
+        <h2 class="text-4xl font-bold mb-8 text-[#304463] text-center">ПОТРЕБИТЕЛСКИ ОТЗИВИ</h2>
+        <p class="text-center text-[#7D8ABC] mb-16">18 369 мнения, от които 2 299 от български клиенти</p>
+        <div class="flex flex-col gap-12">
+            <div class="review-item flex flex-col md:flex-row gap-8 items-start">
+                <div
+                    class="flex-none w-16 h-16 rounded-full bg-[#FFC7ED] flex items-center justify-center text-xl font-bold text-white">
+                    ДА</div>
+                <div class="flex-1">
+                    <h4 class="text-xl font-semibold text-[#304463]">Даниела А.</h4>
+                    <span class="text-[#ae8c7c]">потвърдена поръчка</span>
+                    <p class="mt-4 text-[#304463]">Копринено нежни масла за кожата. Ароматите са превъзходни.</p>
+                    <p class="text-[#7D8ABC] mt-2">Мнението е за продуктът <a href="#" class="underline">WATERMELON Suntan &
+                            Body Oil</a></p>
+                </div>
+                <img src="https://via.placeholder.com/100x100" alt="Product Image"
+                    class="w-32 h-32 object-cover rounded-lg">
+                <span class="text-[#7D8ABC] mt-4 md:mt-0">08.07.2024</span>
+            </div>
+            <div class="review-item flex flex-col md:flex-row gap-8 items-start">
+                <div
+                    class="flex-none w-16 h-16 rounded-full bg-[#FFC7ED] flex items-center justify-center text-xl font-bold text-white">
+                    КВ</div>
+                <div class="flex-1">
+                    <h4 class="text-xl font-semibold text-[#304463]">Калина В.</h4>
+                    <span class="text-[#ae8c7c]">потвърдена поръчка</span>
+                    <p class="mt-4 text-[#304463]">Уникално масло! Уникален аромат!</p>
+                </div>
+                <img src="https://via.placeholder.com/100x100" alt="Product Image"
+                    class="w-32 h-32 object-cover rounded-lg">
+                <span class="text-[#7D8ABC] mt-4 md:mt-0">23.06.2024</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer-section px-4 md:px-10 lg:px-20 py-8 bg-[#304463] text-white">
+        <div class="payment-methods-section px-4 md:px-10 lg:px-20 py-8 bg-[#304463] text-white">
+            <div class="text-center mb-8">
+                <h4 class="text-lg font-bold">Гарантирано сигурно плащане с:</h4>
+            </div>
+            <div class="flex justify-center gap-8">
+                <img src="https://via.placeholder.com/100x50?text=VISA" alt="VISA" class="h-12">
+                <img src="https://via.placeholder.com/100x50?text=Mastercard" alt="Mastercard" class="h-12">
+                <img src="https://via.placeholder.com/100x50?text=Discover" alt="Discover" class="h-12">
+                <img src="https://via.placeholder.com/100x50?text=PayPal" alt="PayPal" class="h-12">
+                <img src="https://via.placeholder.com/100x50?text=AMEX" alt="American Express" class="h-12">
+                <img src="https://via.placeholder.com/100x50?text=G+Pay" alt="Google Pay" class="h-12">
+                <img src="https://via.placeholder.com/100x50?text=Apple+Pay" alt="Apple Pay" class="h-12">
+            </div>
+        </div>
+
+        <div class="grid-line"></div>
+
+        <div class="flex flex-col md:flex-row justify-between py-8 gap-8">
+            <div class="flex-1">
+                <h4 class="text-lg font-bold mb-4">Полезни връзки</h4>
+                <ul class="text-sm space-y-2">
+                    <li><a href="#" class="hover:underline">Продукти</a></li>
+                    <li><a href="#" class="hover:underline">CLUB</a></li>
+                    <li><a href="#" class="hover:underline">Контакти</a></li>
+                    <li><a href="#" class="hover:underline">За нас</a></li>
+                    <li><a href="#" class="hover:underline">Правила за закупуване</a></li>
+                    <li><a href="#" class="hover:underline">Условия за ползване на сайта</a></li>
+                    <li><a href="#" class="hover:underline">Условия на Програма за лоялност</a></li>
+                    <li><a href="#" class="hover:underline">Политика за бисквитки</a></li>
+                    <li><a href="#" class="hover:underline">Политика за връщане</a></li>
+                    <li><a href="#" class="hover:underline">Поръчка и доставка</a></li>
+                    <li><a href="#" class="hover:underline">Политика за защита на лични данни</a></li>
+                </ul>
+            </div>
+            <div class="flex-1">
+                <h4 class="text-lg font-bold mb-4">Нека бъдем приятели!</h4>
+                <p class="text-sm mb-4">Абонирайте се, за да бъдете сред първите, които ще научат за нашите нови продукти и
+                    промоции:</p>
+                <input type="email" placeholder="твоят имейл адрес" class="w-full p-4 mb-4 rounded-lg text-[#304463]">
+                <label class="block mb-4">
+                    <input type="checkbox" class="mr-2">
+                    <span class="text-sm">Съгласен/На съм предоставените от мен имейли да бъдат използвани, за да получавам
+                        известия за новости, подаръци и бъдещи промоции, свързани с продуктите COCOSOLIS, съгласно <a
+                            href="#" class="underline text-[#FFC7ED]">Политиката за личните данни</a>.</span>
+                </label>
+                <button class="bg-[#ffc7ed] text-white py-3 px-8 rounded-lg hover:bg-opacity-80 transition">ВЛЕЗ В
+                    КЛУБА</button>
+            </div>
+            <div class="flex-1">
+                <h4 class="text-lg font-bold mb-4">Последвайте ни</h4>
+                <div class="flex gap-4 mb-4">
+                    <a href="#" class="text-white text-2xl hover:text-[#FFC7ED]"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-white text-2xl hover:text-[#FFC7ED]"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="text-white text-2xl hover:text-[#FFC7ED]"><i class="fab fa-tiktok"></i></a>
+                </div>
+                <p class="text-sm">Тагни ни и има шанс да видиш своята снимка или видео в профила ни! #cocosolis</p>
+            </div>
+        </div>
+
+        <div class="grid-line"></div>
+
+        <div class="mt-8 text-center text-sm">
+            <p>© 2016 - 2024 COCOSOLIS | All rights reserved</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
